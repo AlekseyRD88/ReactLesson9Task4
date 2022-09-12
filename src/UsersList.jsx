@@ -3,7 +3,7 @@ import uuid from 'react-native-uuid'
 import User from './User.jsx';
 import Filter from './Filter.jsx';
 
-let keyId = uuid.v1();
+
 class UsersList extends Component {
   
   constructor(props) {
@@ -12,7 +12,7 @@ class UsersList extends Component {
       filterText: '',
     };
   }
-  
+    keyId = uuid.v1();
     render() {
       let usersList;
 
@@ -24,7 +24,7 @@ class UsersList extends Component {
         <ul className="users">
         {
           usersList.map(user => (
-            <User key={keyId} {...user}/>
+            <User key={this.keyId} {...user}/>
           ))
         }
         </ul>
