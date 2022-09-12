@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import nextId from "react-id-generator";
+import nextId from 'react-id-generator';
 import User from './User.jsx';
 import Filter from './Filter.jsx';
 
