@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { v1 as uuidv1 } from 'uuid';
+import uuid from 'react-native-uuid'
 import User from './User.jsx';
 import Filter from './Filter.jsx';
 
+let keyId = uuid.v1();
 class UsersList extends Component {
-  keyId = uuidv1();
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -23,7 +24,7 @@ class UsersList extends Component {
         <ul className="users">
         {
           usersList.map(user => (
-            <User key={this.keyId} {...user}/>
+            <User key={keyId} {...user}/>
           ))
         }
         </ul>
