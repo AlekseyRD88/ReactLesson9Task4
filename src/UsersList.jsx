@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import nextId from 'react-id-generator';
+import { v1 as uuidv1 } from 'uuid';
 import User from './User.jsx';
 import Filter from './Filter.jsx';
 
 class UsersList extends Component {
-  keyId = nextId();
+  keyId = uuidv1();
   constructor(props) {
     super(props);
     this.state = {
