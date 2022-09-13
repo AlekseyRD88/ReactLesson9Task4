@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import uuid from 'react-native-uuid'
 import User from './User.jsx';
 import Filter from './Filter.jsx';
 
@@ -12,7 +11,6 @@ class UsersList extends Component {
       filterText: '',
     };
   }
-    keyId = uuid.v1();
     render() {
       let usersList;
 
@@ -23,8 +21,8 @@ class UsersList extends Component {
         <Filter />
         <ul className="users">
         {
-          usersList.map(user => (
-            <User key={this.keyId} {...user}/>
+          usersList.map(User, index => (
+            <User key={index} {...User}/>
           ))
         }
         </ul>
