@@ -1,26 +1,20 @@
-import React, { Component } from 'react';
-class Filter extends Component {
-  onChange = event => {
-    this.setState({
-      filterText: event.target.value,
-    })
-  }
-  render() {
-    const users = this.state.users.filter((user) => {
-      if(this.state.filterText === '') {
-        return user;
-      } else if(user.includes(this.state.filterText)){
-        return user;
-      }
-    })
-
+import React from 'react';
+const Filter = (props) => {
+    const count = users.filter((user) => {
+    if(props.filterText === '') {
+      return null;
+    } else if(user.includes(props.filterText)){
+      return user;
+    }
+})
+  
   return (
     <div className="filter">
-    <span className="filter__count">{users.length}</span>
-    <input type="text" className="filter__input" onChange={this.onChange} />
+    <span className="filter__count">{count.length}</span>
+    <input type="text" className="filter__input" onChange={props.onChange} />
   </div>
   );
-  }
 }
+
 
 export default Filter;

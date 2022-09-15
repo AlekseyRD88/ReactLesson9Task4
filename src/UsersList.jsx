@@ -9,26 +9,25 @@ class UsersList extends Component {
     super(props);
     this.state = {
       filterText: '',
+      users: [],
     };
   }
+  onChange = event => {
+    this.setState({
+      filterText: event.target.value
+    });
+  }
     render() {
-      let usersList;
-
-
-
       return (
         <div>
         <Filter />
         <ul className="users">
-        {
-          usersList.map(User, index => (
-            <User key={index} {...User}/>
-          ))
-        }
+        {this.state.users.map((user, index) => (
+            <User key={index} {...user}/>))}
         </ul>
         </div>
       );
     }   
-  }
+}
   
 export default UsersList;
