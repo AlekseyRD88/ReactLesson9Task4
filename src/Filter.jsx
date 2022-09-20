@@ -1,13 +1,6 @@
 import React from 'react';
 const Filter = (props) => {
-    const count = users.filter((user) => {
-    if(props.filterText === '') {
-      return null;
-    } else if(user.includes(props.filterText)){
-      return user;
-    }
-})
-  
+      const count = props.users.filter((user) => user.includes(props.filterText));
   return (
     <div className="filter">
     <span className="filter__count">{count.length}</span>

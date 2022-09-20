@@ -12,7 +12,7 @@ class UsersList extends Component {
       users: [],
     };
   }
-  onChange = event => {
+  onChange = (event) => {
     this.setState({
       filterText: event.target.value
     });
