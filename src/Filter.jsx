@@ -4,7 +4,7 @@ const Filter = ({onChange, count}) => {
   return (
     <div className="filter">
     <span className="filter__count">{count}</span>
-    <input type="text" className="filter__input" onChange={onChange} />
+    <input type="text" className="filter__input" onChange={onChange} value={filterText}/>
   </div>
   );
 }
