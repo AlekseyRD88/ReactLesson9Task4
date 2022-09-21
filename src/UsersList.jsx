@@ -15,7 +15,7 @@ class UsersList extends Component {
   onChange = (event) => {
     this.setState({
       filterText: event.target.value,
-      users: this.props.users.filter(user=> user.name.toLowerCase().includes(text.target.value.toLowerCase())),
+      users: this.props.users.filter(user=> user.name.toLowerCase().includes(event.target.value.toLowerCase())),
     });
   }
     render() {
