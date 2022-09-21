@@ -1,4 +1,4 @@
-let UserArray = [
+let userArray = [
   {
     name: 'Pat',
     age: 23
@@ -12,4 +12,4 @@ let UserArray = [
     age: 35
   }
 ]
-export default UserArray;
+export default userArray;

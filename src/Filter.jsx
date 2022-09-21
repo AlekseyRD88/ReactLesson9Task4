@@ -1,10 +1,11 @@
 import React from 'react';
-const Filter = (props) => {
-      const count = props.users.filter((user) => user.includes(props.filterText));
+
+const Filter = ({users, filterText, onChange}) => {
+  const count = users.filter((user) => user.includes(filterText));
   return (
     <div className="filter">
     <span className="filter__count">{count.length}</span>
-    <input type="text" className="filter__input" onChange={props.onChange} />
+    <input type="text" className="filter__input" onChange={onChange} />
   </div>
   );
 }

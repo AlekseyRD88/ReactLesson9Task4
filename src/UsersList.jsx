@@ -9,7 +9,7 @@ class UsersList extends Component {
     super(props);
     this.state = {
       filterText: '',
-      users: [],
+      users: this.props.users,
     };
   }
   onChange = (event) => {
@@ -20,7 +20,7 @@ class UsersList extends Component {
     render() {
       return (
         <div>
-        <Filter />
+        <Filter users={this.users} filterText={this.filterText} onChange={this.onChange}/>
         <ul className="users">
         {this.state.users.map((user, index) => (
             <User key={index} {...user}/>))}
